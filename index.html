@@ -533,12 +533,17 @@
         }
 
         /*===== CONTACT =====*/
+        #contact {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
         .contact__container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
         }
 
         .contact__info {
@@ -619,18 +624,36 @@
             background: rgba(233, 196, 106, 0.05);
             border: 2px solid var(--first-color);
             border-radius: 1rem;
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+
+        .contact__form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .contact__form-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact__form-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .contact__form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .contact__form-label {
             display: block;
             color: #fff;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
@@ -640,7 +663,7 @@
             width: 100%;
             font-size: var(--normal-font-size);
             font-weight: var(--font-semi);
-            padding: 1rem;
+            padding: 0.75rem;
             border-radius: 0.5rem;
             border: 2px solid var(--first-color);
             outline: none;
@@ -662,6 +685,7 @@
         .contact__textarea {
             min-height: 150px;
             resize: vertical;
+            flex: 1;
         }
 
         .contact__button {
@@ -673,7 +697,7 @@
             cursor: pointer;
             background-color: var(--first-color);
             color: #fff;
-            padding: 1rem 2.5rem;
+            padding: 0.75rem 2rem;
             font-weight: var(--font-semi);
             border-radius: 0.5rem;
             transition: 0.3s;
@@ -687,8 +711,33 @@
         }
 
         @media screen and (min-width: 768px) {
+            #contact {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
             .contact__container {
-                grid-template-columns: 1fr 1.5fr;
+                grid-template-columns: 1fr 2fr;
+                gap: 2rem;
+            }
+
+            .contact__form {
+                grid-template-columns: 0.9fr 1.1fr;
+                gap: 1.5rem;
+            }
+
+            .contact__form-right {
+                height: 100%;
+            }
+
+            .contact__form-right .contact__form-group {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact__textarea {
+                min-height: 100%;
             }
         }
 
@@ -1123,27 +1172,31 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
                 <!-- Contact Form -->
                 <div class="contact__form-container">
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfyXbMbdUAZpEyXTBX1dfKDBDwrhqCmyZAmusZLQyj0bE8raA/formResponse" method="POST" target="_blank" class="contact__form">
-                        <div class="contact__form-group">
-                            <label class="contact__form-label">Your Name</label>
-                            <input type="text" name="entry.556695565" placeholder="Tony Stark" class="contact__input" required>
+                        <div class="contact__form-left">
+                            <div class="contact__form-group">
+                                <label class="contact__form-label">Your Name</label>
+                                <input type="text" name="entry.556695565" placeholder="Tony Stark" class="contact__input" required>
+                            </div>
+                            
+                            <div class="contact__form-group">
+                                <label class="contact__form-label">Your Email</label>
+                                <input type="email" name="entry.443267249" placeholder="tony@example.com" class="contact__input" required>
+                            </div>
+                            
+                            <div class="contact__form-group">
+                                <label class="contact__form-label">Subject</label>
+                                <input type="text" name="entry.1999428494" placeholder="Let's catch up !" class="contact__input" required>
+                            </div>
                         </div>
                         
-                        <div class="contact__form-group">
-                            <label class="contact__form-label">Your Email</label>
-                            <input type="email" name="entry.443267249" placeholder="tony@example.com" class="contact__input" required>
+                        <div class="contact__form-right">
+                            <div class="contact__form-group">
+                                <label class="contact__form-label">Message</label>
+                                <textarea name="entry.1944667727" placeholder="Your message here..." class="contact__input contact__textarea" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="contact__button button">Send Message</button>
                         </div>
-                        
-                        <div class="contact__form-group">
-                            <label class="contact__form-label">Subject</label>
-                            <input type="text" name="entry.1999428494" placeholder="Let's catch up !" class="contact__input" required>
-                        </div>
-                        
-                        <div class="contact__form-group">
-                            <label class="contact__form-label">Message</label>
-                            <textarea name="entry.1944667727" placeholder="Your message here..." class="contact__input contact__textarea" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="contact__button button">Send Message</button>
                     </form>
                 </div>
             </div>
