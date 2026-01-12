@@ -494,7 +494,7 @@
         }
 
         .education__gpa {
-            color: #4ade80;
+            color: var(--first-color);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
@@ -923,6 +923,144 @@
                 width: 450px;
             }
         }
+
+        /*===== ALTERNATE SECTION THEME =====*/
+        .section-alt {
+            background-color: var(--first-color);
+            color: var(--second-color);
+        }
+
+        .section-alt .section-title {
+            color: var(--second-color);
+        }
+
+        .section-alt .section-title::after {
+            background-color: var(--second-color);
+        }
+
+        /* Adjustments for About Section */
+        .section-alt .about__text {
+            color: #404040;
+            font-weight: 500;
+        }
+        
+        /* Adjustments for Experience/Work Section */
+        .section-alt .work__item {
+            background: rgba(40, 40, 40, 0.05);
+            border: 1px solid rgba(40, 40, 40, 0.2);
+            box-shadow: none;
+        }
+
+        .section-alt .work__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(40, 40, 40, 0.15);
+            background: rgba(40, 40, 40, 0.1);
+        }
+
+        .section-alt .work__title {
+            color: var(--second-color);
+        }
+
+        .section-alt .work__company,
+        .section-alt .work__date {
+            color: #555;
+            font-weight: 600;
+        }
+
+        .section-alt .work__description {
+            color: #404040;
+        }
+        
+        /* Adjustments for Education Section */
+        .section-alt .education__item {
+            background: rgba(40, 40, 40, 0.05);
+            border: 1px solid rgba(40, 40, 40, 0.2);
+        }
+
+        .section-alt .education__item:hover {
+             transform: translateY(-3px);
+             box-shadow: 0px 5px 20px rgba(40, 40, 40, 0.15);
+        }
+
+        .section-alt .education__degree {
+            color: var(--second-color);
+        }
+
+        .section-alt .education__university {
+            color: #404040;
+            font-weight: 600;
+        }
+
+        .section-alt .education__date {
+            color: #555;
+        }
+
+        .section-alt .education__gpa {
+            color: #008800; /* Darker green for contrast */
+        }
+        
+        .section-alt .education__courses {
+            color: #404040;
+        }
+        
+        /* Adjustments for Contact Section */
+        .section-alt .contact__info {
+            background: rgba(40, 40, 40, 0.05);
+            border: 2px solid var(--second-color);
+        }
+        
+        .section-alt .contact__info-title {
+            color: var(--second-color);
+        }
+        
+        .section-alt .contact__info-text {
+            color: #404040;
+        }
+        
+        .section-alt .contact__icon,
+        .section-alt .contact__social-link {
+            background: var(--second-color);
+            color: var(--first-color);
+        }
+        
+        .section-alt .contact__detail-text {
+             color: #282828;
+             font-weight: 500;
+        }
+        
+        .section-alt .contact__form-container {
+            background: rgba(40, 40, 40, 0.05);
+            border: 2px solid var(--second-color);
+        }
+        
+        .section-alt .contact__form-label {
+            color: var(--second-color);
+        }
+        
+        .section-alt .contact__input {
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid var(--second-color);
+            color: var(--second-color);
+        }
+        
+        .section-alt .contact__input:focus {
+             background: rgba(255, 255, 255, 0.9);
+             box-shadow: 0 0 10px rgba(40, 40, 40, 0.2);
+        }
+        
+        .section-alt .contact__input::placeholder {
+             color: #666;
+        }
+        
+        .section-alt .contact__button {
+            background-color: var(--second-color);
+            color: var(--first-color);
+        }
+        
+        .section-alt .contact__button:hover {
+             box-shadow: 0px 10px 36px rgba(40, 40, 40, 0.3);
+        }
+
     </style>
 </head>
 <body>
@@ -974,7 +1112,7 @@
         </section>
 
         <!--===== ABOUT =====-->
-        <section class="about section" id="about">
+        <section class="about section section-alt" id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about__container bd-grid">
                 <div>
@@ -1030,7 +1168,7 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
         </section>
 
         <!--===== EXPERIENCE =====-->
-        <section class="work section" id="experience">
+        <section class="work section section-alt" id="experience">
             <h2 class="section-title">Professional Experience</h2>
             <div class="work__container bd-grid">
                 <div class="work__item">
@@ -1106,7 +1244,7 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
         </section>
 
         <!--===== EDUCATION =====-->
-        <section class="section" id="education">
+        <section class="section section-alt" id="education">
             <h2 class="section-title">Education</h2>
             <div class="bd-grid">
                 <div class="education__item">
@@ -1146,7 +1284,7 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
         </section>
 
         <!--===== CONTACT =====-->
-        <section class="section" id="contact">
+        <section class="section section-alt" id="contact">
             <h2 class="section-title">Contact Me</h2>
             <div class="contact__container bd-grid">
                 <!-- Get in Touch Section -->
