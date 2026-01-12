@@ -597,27 +597,14 @@
             font-size: 1rem;
         }
 
-        .contact__social-links {
-            display: flex;
-            gap: 1rem;
+
+        a.contact__detail {
+            transition: transform 0.3s;
+            cursor: pointer;
         }
 
-        .contact__social-link {
-            width: 45px;
-            height: 45px;
-            background: var(--first-color);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #fff;
-            transition: all 0.3s;
-        }
-
-        .contact__social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(233, 196, 106, 0.4);
+        a.contact__detail:hover {
+            transform: translateX(10px);
         }
 
         .contact__form-container {
@@ -654,7 +641,6 @@
             color: #fff;
             font-weight: 600;
             margin-bottom: 0.4rem;
-            text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
@@ -1017,8 +1003,7 @@
             color: #404040;
         }
         
-        .section-alt .contact__icon,
-        .section-alt .contact__social-link {
+        .section-alt .contact__icon {
             background: var(--second-color);
             color: var(--first-color);
         }
@@ -1266,19 +1251,18 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
         <section class="section" id="recognitions">
             <h2 class="section-title">Recognitions & Achievements</h2>
             <div class="bd-grid">
+
+                <div class="recognition__item">
+                    <h3 class="recognition__title">Publicis Sapient Learning Mindset Award</h3>
+                    <p class="recognition__description">Recognized for excellent adaptability and continuous learning while architecting scalable enterprise software and AI solutions on AWS and Azure, mentoring junior engineers on Kubernetes optimization and DevOps best practices.</p>
+                </div>
                 <div class="recognition__item">
                     <h3 class="recognition__title">IIT JEE Advanced</h3>
                     <p class="recognition__description">Achieved 99.2 percentile rank among 1 million+ candidates nationwide, demonstrating exceptional problem-solving and analytical capabilities.</p>
                 </div>
-
-                <div class="recognition__item">
-                    <h3 class="recognition__title">Publicis Sapient Learning Mindset Award</h3>
-                    <p class="recognition__description">Recognized for exceptional adaptability and continuous learning while architecting scalable enterprise AI solutions on AWS and Azure, mentoring junior engineers on Kubernetes optimization and DevOps best practices.</p>
-                </div>
-
                 <div class="recognition__item">
                     <h3 class="recognition__title">Merit Scholarship, Sri Chaitanya Educational Institutions</h3>
-                    <p class="recognition__description">Awarded full tuition scholarship for Grades 11-12 based on outstanding performance in national-level competitive exams.</p>
+                    <p class="recognition__description">Awarded full tuition scholarship for Grades 11 and 12 based on outstanding performance in national-level competitive exams held among 400,000 students.</p>
                 </div>
             </div>
         </section>
@@ -1290,7 +1274,7 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
                 <!-- Get in Touch Section -->
                 <div class="contact__info">
                     <h3 class="contact__info-title">Let's Connect !</h3>
-                    <p class="contact__info-text">Feel free to reach out about any projects, opportunities .</p>
+                    <p class="contact__info-text">Feel free to reach out about any projects, opportunities or ideas .</p>
                     
                     <div class="contact__details">
                         <div class="contact__detail">
@@ -1306,14 +1290,19 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
                             </div>
                             <span class="contact__detail-text">Boulder, CO</span>
                         </div>
-                    </div>
-                    
-                    <div class="contact__social-links">
-                        <a href="https://github.com/pradeep80555" target="_blank" class="contact__social-link">
-                            <i class='bx bxl-github'></i>
+
+                        <a href="https://www.linkedin.com/in/pradeep-alapati/" target="_blank" class="contact__detail">
+                            <div class="contact__icon">
+                                <i class='bx bxl-linkedin'></i>
+                            </div>
+                            <span class="contact__detail-text">LinkedIn</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/pradeep-alapati/" target="_blank" class="contact__social-link">
-                            <i class='bx bxl-linkedin'></i>
+
+                        <a href="https://github.com/pradeep80555" target="_blank" class="contact__detail">
+                            <div class="contact__icon">
+                                <i class='bx bxl-github'></i>
+                            </div>
+                            <span class="contact__detail-text">GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -1342,7 +1331,7 @@ Feel free to contact me if you think we’d click or just want to connect!</p>
                         <div class="contact__form-right">
                             <div class="contact__form-group">
                                 <label class="contact__form-label">Message</label>
-                                <textarea name="entry.1944667727" placeholder="Your message here..." class="contact__input contact__textarea" required></textarea>
+                                <textarea name="entry.1944667727" placeholder="Your message here ..." class="contact__input contact__textarea" required></textarea>
                             </div>
                             
                             <button type="submit" class="contact__button button">Send Message</button>
